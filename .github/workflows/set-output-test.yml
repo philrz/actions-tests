@@ -12,4 +12,5 @@ jobs:
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
     - name: Show what was extracted
-      run: echo "The current branch is: ${{ steps.extract_branch.outputs.branch }}"
+      if: ${{ steps.extract_branch.outputs.branch == 'main' }}
+      run: echo "The current branch is main"
