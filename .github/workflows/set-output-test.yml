@@ -14,4 +14,4 @@ jobs:
     - name: Show what was extracted
       run: echo "The current branch is $TEST_BRANCH"
       env:
-        TEST_BRANCH:${{ steps.extract_branch.outputs.branch }}
+        TEST_BRANCH: ${{ steps.extract_branch.outputs.branch }}
