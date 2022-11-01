@@ -1,0 +1,15 @@
+name: Test of set-output transition
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Extract branch name
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: Show what was extracted
+      run: echo "The current branch is: ${{ steps.extract_branch.outputs.branch }}"
