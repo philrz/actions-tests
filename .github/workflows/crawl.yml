@@ -1,0 +1,16 @@
+name: Test failing Algolia crawler
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test failing Algolia crawler
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Trigger Algolia Crawler
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+               --user "${{ secrets.ALGOLIA_CRAWLER_APP_ID }}:${{ secrets.ALGOLIA_CRAWLER_API_KEY }}" \
+               "https://crawler.algolia.com/api/1/crawlers/${{ secrets.ALGOLIA_CRAWLER_ID }}/reindex"
+
