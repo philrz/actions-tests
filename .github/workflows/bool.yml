@@ -13,5 +13,5 @@ jobs:
     steps:
       - run: echo "Before greeting"
       - run: echo "Hello, world!"
-        if: inputs.dont_echo == 'false'
+        if: inputs.dont_echo == ''
       - run: echo "After greeting"
