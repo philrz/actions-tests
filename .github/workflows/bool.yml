@@ -1,0 +1,17 @@
+name: Test with booleans
+
+on:
+  workflow_dispatch:
+    inputs:
+      dont_echo:
+        required: false
+        type: boolean
+
+jobs:
+  my-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "Before greeting"
+      - run: echo "Hello, world!"
+        if: inputs.dont_echo == 'true'
+      - run: echo "After greeting"
