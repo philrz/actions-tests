@@ -23,7 +23,12 @@ jobs:
     - name: Show directory in sh
       run: |
         pwd
+        echo "Contents of /"
         ls -l /
+        echo "Contents of /usr"
         ls -l /usr
+        echo "Contents of /usr/local"
         ls -l /usr/local
+        echo "Conents of /d"
+        ls -l /d
       shell: sh
