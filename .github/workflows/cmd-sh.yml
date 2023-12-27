@@ -18,5 +18,7 @@ jobs:
     - name: Show directory in sh
       run: |
         pwd
-        ls /
+        ls -l /
+        ls -l /usr
+        ls -l /usr/local
       shell: sh
