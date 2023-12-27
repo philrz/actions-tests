@@ -11,9 +11,11 @@ jobs:
     - name: Show directory in cmd
       run: |
         cd
+        mkdir -p /usr/local/zeek/share/zeek/site
       shell: cmd
 
     - name: Show directory in sh
       run: |
         pwd
+        ls -l /usr/local/zeek/share/zeek/site
       shell: sh
