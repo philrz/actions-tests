@@ -17,6 +17,7 @@ jobs:
         mkdir \usr\local
         mkdir \usr\local\zeek
         cd \usr\local\zeek
+        type "hello" > hello.txt
         cd
       shell: cmd
 
@@ -29,4 +30,10 @@ jobs:
         ls -l /usr
         echo "Conents of /d"
         ls -l /d
+        echo "Contents of /d/usr"
+        ls -l /d/usr
+        echo "Conents of /d/usr/local"
+        ls -l /d/usr/local
+        echo "Contents of /d/usr/local/zeek"
+        ls -l /d/usr/local/zeek
       shell: sh
