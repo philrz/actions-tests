@@ -1,0 +1,22 @@
+name: Get OS and arch info from Go
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: [macos-12, ubuntu-20.04, windows-2019]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Go
+      uses: actions/setup-go@v3
+      with:
+        go-version-file: go.mod
+
+    - name: Print info
+      run: |
+        go env GOOS
+        go env GOARCH
