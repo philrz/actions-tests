@@ -16,6 +16,8 @@ jobs:
         mkdir \usr
         mkdir \usr\local
         mkdir \usr\local\zeek
+        cd \usr\local\zeek
+        cd
       shell: cmd
 
     - name: Show directory in sh
