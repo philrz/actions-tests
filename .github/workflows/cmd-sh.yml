@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: [windows-2019]
+
+    steps:
+    - name: Show directory in cmd
+      run: |
+        cd
+      shell: cmd
+
+    - name: Show directory in sh
+      run: |
+        pwd
+      shell: sh
