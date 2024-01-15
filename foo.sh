@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/bash -ex
 
 [[ $(uname) =~ "NT" ]] &&
   echo "I am on Windows"
