@@ -17,5 +17,7 @@ jobs:
           path: package.json
 
       - name: Show a value
-        run: echo "productName - ${{ steps.zui-package.outputs.productName }}"
+        run: ./printvar.sh
         shell: bash
+        env:
+          MY_INPUT: "${{ github.workspace }}/dist/apps/zui/${{ steps.zui-package.outputs.productName }} Setup"
