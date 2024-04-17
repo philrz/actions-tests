@@ -18,3 +18,4 @@ jobs:
 
       - name: Show a value
         run: echo "productName - ${{ steps.zui-package.outputs.productName }}"
+        shell: bash
