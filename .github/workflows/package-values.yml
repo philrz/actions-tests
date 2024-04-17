@@ -20,4 +20,4 @@ jobs:
         run: ./printvar.sh
         shell: bash
         env:
-          MY_INPUT: ${{ github.workspace }}/dist/apps/zui/${{ steps.zui-package.outputs.productName }} Setup
+          MY_INPUT: ${{ github.workspace }}/dist/apps/zui/${{ fromJSON(steps.zui-package.outputs.productName) }} Setup
