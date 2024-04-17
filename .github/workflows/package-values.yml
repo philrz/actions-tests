@@ -1,0 +1,20 @@
+name: Test extracting values from a package.json
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_run:
+    runs-on: windows-2019
+    steps:
+      - name: Checkout Zui
+        uses: actions/checkout@v3
+
+      - name: Enable reading of values from package.json
+        id: zui-package
+        uses: RadovanPelka/github-action-json@v1.0.1
+        with:
+          path: package.json
+
+      - name: Show a value
+        run: echo "productName - ${{ steps.zui-package.outputs.productName }}"
